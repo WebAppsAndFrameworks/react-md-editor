@@ -1,21 +1,9 @@
-var _ = require('lodash');
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Editor = require('react-medium-editor');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Editor from 'react-medium-editor';
+import toMarkdown from './to-markdown';
 
-require('medium-editor/dist/css/medium-editor.css');
-require('medium-editor/dist/css/themes/default.css');
-
-var markdownConfig = {
-  'gfm': true
-};
-
-var partial = require('lodash/partial'),
-    ph = partial.placeholder = {};
-
-var toMarkdown = partial(require('to-markdown'), ph, markdownConfig);
-
-var Main = React.createClass({
+let Main = React.createClass({
   getInitialState() {
     return {
       'text': 'Fusce dapibus, tellus ac cursus commodo'
