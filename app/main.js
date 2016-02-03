@@ -10,7 +10,10 @@ var markdownConfig = {
   'gfm': true
 };
 
-var toMarkdown = _.partial(require('to-markdown'), _, markdownConfig);
+var partial = require('lodash/partial'),
+    ph = partial.placeholder = {};
+
+var toMarkdown = partial(require('to-markdown'), ph, markdownConfig);
 
 var Main = React.createClass({
   getInitialState() {
