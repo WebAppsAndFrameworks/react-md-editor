@@ -30,9 +30,11 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "lodash": "^4.2.1",
     "medium-editor": "^5.14.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
-    "react-medium-editor": "^1.6.2"
+    "react-medium-editor": "^1.6.2",
+    "to-markdown": "^2.0.1"
   }
 }

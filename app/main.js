@@ -1,9 +1,16 @@
+var _ = require('lodash');
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Editor = require('react-medium-editor');
 
 require('medium-editor/dist/css/medium-editor.css');
 require('medium-editor/dist/css/themes/default.css');
+
+var markdownConfig = {
+  'gfm': true
+};
+
+var toMarkdown = _.partial(require('to-markdown'), _, markdownConfig);
 
 var Main = React.createClass({
   getInitialState() {
@@ -28,7 +35,7 @@ var Main = React.createClass({
         </div>
         <div className="row">
           <div className="col-xs-6">
-            {this.state.text}
+            { toMarkdown(this.state.text) }
           </div>
           <div className="col-xs-6">
             <Editor text={ this.state.text } onChange={ this.handleChange } />
