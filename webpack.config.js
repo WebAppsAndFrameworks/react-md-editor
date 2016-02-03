@@ -1,8 +1,7 @@
 module.exports = {
-  'entry': 'main.js',
+  'entry': './app/main.js',
   'output': {
-    'path': './',
-    'filename': 'index.js'
+    'filename': './public/index.js'
   },
   'devServer': {
     'inline': true,
@@ -12,9 +11,11 @@ module.exports = {
     'loaders': [
       {
         'exclude': /node_modules/,
-        'loaders': ['babel-loader'],
-        'query': { 'presets': ['es2015', 'react'] },
-        'test': /\.js$/
+        'loader': 'babel',
+        'query': { 
+          'presets': ['react', 'es2015'] 
+        },
+        'test': /\.jsx?$/
       }
     ]
   }
