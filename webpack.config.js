@@ -1,33 +1,10 @@
 'use strict';
 
-var webpack = require('webpack');
+var _ = require('lodash'),
+    webpack = require('webpack'),
+    config = _.cloneDeep(require('./webpack.config.base'));
 
-var env = process.env.NODE_ENV;
-
-var config = {
-  'devServer': {
-    'host': '0.0.0.0',
-    'inline': true,
-    'port': 3333
-  },
-  'module': {
-    'loaders': [
-      {
-        'test': /\.jsx?$/,
-        'exclude': /node_modules/,
-        'loader': 'babel',
-        'query': { 'presets': ['react', 'es2015'] }
-      },
-      {
-        'test': /\.css$/,
-        'loader': 'style-loader!css-loader'
-      }
-    ]
-  },
-  'plugins': []
-};
-
-if (env == 'production') {
+if (process.env.NODE_ENV == 'production') {
   config.plugins.push(
     new webpack.optimize.UglifyJsPlugin({
       'compressor': {
