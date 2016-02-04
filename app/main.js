@@ -1,3 +1,6 @@
+import 'medium-editor/dist/css/medium-editor.css';
+import 'medium-editor/dist/css/themes/default.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Editor from 'react-medium-editor';
