@@ -16,25 +16,23 @@ let Main = React.createClass({
     });
   },
 
-  render() {
-    return (
-      <div className="container">
-        <div className="row">
-          <div className="col-xs-12">
-            <h1>React Markdown Editor</h1>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-xs-6">
-            { toMarkdown(this.state.text) }
-          </div>
-          <div className="col-xs-6">
-            <Editor text={ this.state.text } onChange={ this.handleChange } />
-          </div>
-        </div>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className="container">
+				<h1>React Markdown Editor</h1>
+				<div className="row">
+					<div className="left">
+            <div className="markdown">
+              {this.state.text}
+            </div>
+					</div>
+					<div className="right">
+						<Editor text={ this.state.text } onChange={ this.handleChange } />
+					</div>
+				</div>
+			</div>
+		);
+	}
 });
 
 ReactDOM.render(<Main />, document.getElementById('app'));

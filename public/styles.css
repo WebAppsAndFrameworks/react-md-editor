@@ -1,0 +1,23 @@
+@import url("./assets/caiuss/caiuss.min.css");
+
+body,
+ {
+  background-color: #fcfcfc;
+}
+
+.left, .right {
+  width: 43%;
+  width: calc(44% - 2px);
+  float: left;
+  font-size: 19px;
+  margin: 1%;
+  padding: 2%;
+  background-color: #fff;
+  border: 1px solid #f4f4f4;
+}
+
+blockquote {
+	margin: 0 25px;
+	border-left: 6px solid #0078d7;
+	padding-left: 9px;
+}
