@@ -9,7 +9,33 @@ import toMarkdown from './to-markdown';
 let Main = React.createClass({
   getInitialState() {
     return {
-      'text': 'Fusce dapibus, tellus ac cursus commodo'
+      'text': 
+        `
+        <h1> Welcome to the React Markdown Editor</h1>
+
+        <h2>Heading 2</h2>
+
+        <h3>Heading 3</h3>
+
+        <ul>
+          <li>I am</li>
+          <li>a list</li>
+          <li>with 3 items</li>
+        </ul>
+
+        <ol>
+          <li>I am</li>
+          <li>a numbered list</li>
+          <li>with 3 items</li>
+        </ol>
+
+        <blockquote>
+        Here is a quote.
+        - Someone important
+        </blockquote>
+
+        <p>Try it out for yourself. Start by editing the text here.</p>
+        `
     };
   },
 
@@ -19,23 +45,25 @@ let Main = React.createClass({
     });
   },
 
-	render() {
-		return (
-			<div className="container">
-				<h1>React Markdown Editor</h1>
-				<div className="row">
-					<div className="left">
+  render() {
+    return (
+      <div className="container">
+        <h1>React Markdown Editor</h1>
+        <div className="row">
+          <div className="left">
             <div className="markdown">
-              {this.state.text}
+              <pre>
+                { toMarkdown(this.state.text) }
+              </pre>
             </div>
-					</div>
-					<div className="right">
-						<Editor text={ this.state.text } onChange={ this.handleChange } />
-					</div>
-				</div>
-			</div>
-		);
-	}
+          </div>
+          <div className="right">
+            <Editor text={ this.state.text } onChange={ this.handleChange } />
+          </div>
+        </div>
+      </div>
+    );
+  }
 });
 
 ReactDOM.render(<Main />, document.getElementById('app'));

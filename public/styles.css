@@ -1,8 +1,8 @@
 @import url("./assets/caiuss/caiuss.min.css");
 
-body,
- {
-  background-color: #fcfcfc;
+html, body
+{
+  background-color: #f4f4f4;
 }
 
 .left, .right {
@@ -13,11 +13,28 @@ body,
   margin: 1%;
   padding: 2%;
   background-color: #fff;
-  border: 1px solid #f4f4f4;
+  border: 1px solid #666;
+  min-height: 600px;
 }
 
 blockquote {
 	margin: 0 25px;
 	border-left: 6px solid #0078d7;
 	padding-left: 9px;
+}
+
+pre {
+  overflow-wrap: break-word;
+}
+
+.right h1 {
+  font-size: 1.5em;
+}
+
+.right h2 {
+  font-size: 1.25em;
+}
+
+.right h3 {
+  font-size: 1em;
 }
