@@ -4,6 +4,7 @@ module.exports = {
     'filename': './public/index.js'
   },
   'devServer': {
+    'host': '0.0.0.0',
     'inline': true,
     'port': 3333
   },
@@ -12,8 +13,8 @@ module.exports = {
       {
         'exclude': /node_modules/,
         'loader': 'babel',
-        'query': { 
-          'presets': ['react', 'es2015'] 
+        'query': {
+          'presets': ['react', 'es2015']
         },
         'test': /\.jsx?$/
       },
