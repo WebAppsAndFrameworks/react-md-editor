@@ -24,7 +24,7 @@ let EditableContent = React.createClass({
   render(){
     return (
       <div className="right">
-            <Editor text={ this.props.text } onChange={this.props.handleChange } />
+            <Editor text={ this.props.text } onChange={ this.props.onChange } />
       </div>
     );
   }
@@ -72,8 +72,8 @@ let Main = React.createClass({
       <div className="container">
         <h1>React Markdown Editor</h1>
         <div className="row">
-          <Markdown text={this.state.text} />
-          <EditableContent text={this.state.text} onChange ={this.handleChange} />
+          <Markdown text={ this.state.text } />
+          <EditableContent text={ this.state.text } onChange={ this.handleChange } />
         </div>
       </div>
     );
