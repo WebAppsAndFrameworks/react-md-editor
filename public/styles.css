@@ -5,6 +5,10 @@ html, body
   background-color: #f4f4f4;
 }
 
+.header {
+    text-align:center;
+}
+
 .left, .right {
   width: 43%;
   width: calc(44% - 2px);
@@ -25,6 +29,7 @@ blockquote {
 
 pre {
   overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .right h1 {

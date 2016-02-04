@@ -55,6 +55,7 @@ let Main = React.createClass({
 
         <blockquote>
         Here is a quote.
+        
         - Someone important
         </blockquote>
 
@@ -70,7 +71,7 @@ let Main = React.createClass({
   render() {
     return (
       <div className="container">
-        <h1>React Markdown Editor</h1>
+        <h1 className="header">React Markdown Editor</h1>
         <div className="row">
           <Markdown text={ this.state.text } />
           <EditableContent text={ this.state.text } onChange={ this.handleChange } />
