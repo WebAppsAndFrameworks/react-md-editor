@@ -5,23 +5,23 @@ import toMarkdown from './to-markdown';
 
 let Markdown = React.createClass({
   render(){
-  	return (
-			<div className="left">
-	      <div className="markdown">
-	          { toMarkdown(this.props.text) }
-	      </div>
-	    </div>
-  	);
+    return (
+      <div className="left">
+        <div className="markdown">
+            { toMarkdown(this.props.text) }
+        </div>
+      </div>
+    );
   }
 });
 
 let EditableContent = React.createClass({
   render(){
-  	return (
-			<div className="right">
+    return (
+      <div className="right">
             <Editor text={ this.props.text } onChange={this.props.handleChange } />
       </div>
-  	);
+    );
   }
 });
 
@@ -41,7 +41,7 @@ let Main = React.createClass({
       <div className="container">
         <h1>React Markdown Editor</h1>
         <div className="row">
-        	<Markdown text={this.state.text} />
+          <Markdown text={this.state.text} />
           <EditableContent text={this.state.text} onChange ={this.handleChange} />
         </div>
       </div>
