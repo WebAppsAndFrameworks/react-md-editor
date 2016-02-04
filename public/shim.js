@@ -39,6 +39,7 @@ document.execCommand = (function(_execCommand) {
       shim = shimExec;
       return complete(element, result);
     }
+    return result;
   }
 
   function wrapper(cmd, ui, arg) {
