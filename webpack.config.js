@@ -1,7 +1,7 @@
 module.exports = {
   'entry': './app/main.js',
   'output': {
-    'filename': './public/index.js'
+    'filename': './public/dist/index.js'
   },
   'devServer': {
     'host': '0.0.0.0',
