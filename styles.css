@@ -1,0 +1,45 @@
+@import url("./assets/caiuss/caiuss.min.css");
+
+html, body
+{
+  background-color: #f4f4f4;
+}
+
+.header {
+    text-align:center;
+}
+
+.left, .right {
+  width: 43%;
+  width: calc(44% - 2px);
+  float: left;
+  font-size: 19px;
+  margin: 1%;
+  padding: 2%;
+  background-color: #fff;
+  border: 1px solid #666;
+  min-height: 600px;
+}
+
+blockquote {
+	margin: 0 25px;
+	border-left: 6px solid #0078d7;
+	padding-left: 9px;
+}
+
+pre {
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.right h1 {
+  font-size: 1.5em;
+}
+
+.right h2 {
+  font-size: 1.25em;
+}
+
+.right h3 {
+  font-size: 1em;
+}
