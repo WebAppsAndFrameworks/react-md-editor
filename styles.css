@@ -5,11 +5,16 @@ html, body
   background-color: #f4f4f4;
 }
 
-.header {
+#app .header {
     text-align:center;
 }
 
-.left, .right {
+#app .container {
+  /* overwrites fixed width from imported styles */
+  width: auto;  
+}
+
+#app .left, #app .right {
   width: 43%;
   width: calc(44% - 2px);
   float: left;
@@ -21,25 +26,25 @@ html, body
   min-height: 600px;
 }
 
-blockquote {
+#app blockquote {
 	margin: 0 25px;
 	border-left: 6px solid #0078d7;
 	padding-left: 9px;
 }
 
-pre {
+#app pre {
   overflow-wrap: break-word;
   white-space: pre-wrap;
 }
 
-.right h1 {
+#app .right h1 {
   font-size: 1.5em;
 }
 
-.right h2 {
+#app .right h2 {
   font-size: 1.25em;
 }
 
-.right h3 {
+#app .right h3 {
   font-size: 1em;
 }
