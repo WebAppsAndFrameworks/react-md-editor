@@ -6,6 +6,8 @@ import ReactDOM from 'react-dom';
 import Editor from 'react-medium-editor';
 import toMarkdown from './to-markdown';
 
+var appElement = document.getElementById('app');
+
 let Markdown = React.createClass({
   render(){
     return (
@@ -78,7 +80,15 @@ let Main = React.createClass({
         </div>
       </div>
     );
-  }
+  },
+  componentWillUpdate (nextProps, nextState) {
+    // Fire an event for easier testing
+    var event = document.createEvent('Event');
+    setTimeout(()=>{
+      event.initEvent('componentUpdated', true, false);
+      appElement.dispatchEvent(event);      
+    }, 0);
+  },
 });
 
-ReactDOM.render(<Main />, document.getElementById('app'));
+ReactDOM.render(<Main />, appElement);
