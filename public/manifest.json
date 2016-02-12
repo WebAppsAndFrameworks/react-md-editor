@@ -1,0 +1,22 @@
+{
+  "name": "React Markdown Editor",
+  "short_name": "MD Editor",
+  "start_url": "http://webappsandframeworks.github.io/react-md-editor",
+  "display": "standalone",
+  "icons": [{
+      "src": "images/Square44x44Logo.png",
+      "sizes": "44x44"
+    }, {
+      "src": "images/Square150x150Logo.png",
+      "sizes": "150x150"
+    }, {
+      "src": "images/SplashScreen.620x300.png",
+      "sizes": "620x300"
+    }],
+    "theme_color": "#00c26e",
+    "background_color": "#00c26e",
+    "mjs_access_whitelist": [{
+      "url": "http://webappsandframeworks.github.io/",
+      "apiAccess": "all"
+    }]
+}
